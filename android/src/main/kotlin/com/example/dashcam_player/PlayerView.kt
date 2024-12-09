@@ -139,7 +139,7 @@ class PlayerView(
                     txtTimeVideo.text = totalTimeString
                     progressBar.progress = (currentPosition * 100 / duration).toInt()
                 }
-                handler.postDelayed(this, 1000) // Update every second
+                handler.postDelayed(this, 500) // Update every second
             }
         }
         handler.post(runnable)
