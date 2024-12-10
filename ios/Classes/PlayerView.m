@@ -10,10 +10,10 @@
     VLCMediaPlayer *_mediaPlayer;
 }
 - (instancetype _Nullable )initWithFrame:(CGRect)frame
-               viewIdentifier:(int64_t)viewId
-                    arguments:(id _Nullable)args
-                         binaryMessenger:(NSObject<FlutterBinaryMessenger>*_Nonnull)messenger
-                    withMediaPlayer:(VLCMediaPlayer*) mediaPlayer {
+                          viewIdentifier:(int64_t)viewId
+                               arguments:(id _Nullable)args
+                         binaryMessenger:(NSObject <FlutterBinaryMessenger> *_Nonnull)messenger
+                         withMediaPlayer:(VLCMediaPlayer *)mediaPlayer {
     if (self) {
         _mediaPlayer = mediaPlayer;
 
@@ -43,19 +43,23 @@
         [_view addSubview:_playButton];
 
         // Time labels setup
-        _currentTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, frame.size.height - 80, 80, 40)];
+        _currentTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, frame.size.height - 80,
+                                                                      80, 40)];
         _currentTimeLabel.textColor = [UIColor whiteColor];
         _currentTimeLabel.text = @"00:00";
         [_view addSubview:_currentTimeLabel];
 
-        _totalTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width - 100, frame.size.height - 80, 80, 40)];
+        _totalTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width - 100,
+                                                                    frame.size.height - 80, 80,
+                                                                    40)];
         _totalTimeLabel.textColor = [UIColor whiteColor];
         _totalTimeLabel.textAlignment = NSTextAlignmentRight;
-        _totalTimeLabel.text = @"--:--";
+        _totalTimeLabel.text = @"00:00";
         [_view addSubview:_totalTimeLabel];
 
         // Seek bar setup
-        _seekBar = [[UISlider alloc] initWithFrame:CGRectMake(20, frame.size.height - 40, frame.size.width - 40, 20)];
+        _seekBar = [[UISlider alloc] initWithFrame:CGRectMake(20, frame.size.height - 40,
+                                                              frame.size.width - 40, 20)];
         [_seekBar addTarget:self action:@selector(seekBarValueChanged:) forControlEvents:UIControlEventValueChanged];
         [_view addSubview:_seekBar];
 
@@ -86,7 +90,7 @@
 
         _currentTimeLabel.text = [self formatTime:currentTime];
         _totalTimeLabel.text = [self formatTime:totalTime];
-        _seekBar.value = (float)currentTime / totalTime;
+        _seekBar.value = (float) currentTime / totalTime;
     }
 }
 

@@ -17,10 +17,12 @@
 - (instancetype _Nullable)initWithFrame:(CGRect)frame
                          viewIdentifier:(int64_t)viewId
                               arguments:(id _Nullable)args
-                        binaryMessenger:(NSObject<FlutterBinaryMessenger>*_Nonnull)messenger;
+                        binaryMessenger:(NSObject <FlutterBinaryMessenger> *_Nonnull)messenger;
 
 // Public Methods
 - (UIView *_Nonnull)view;
+
 - (void)togglePlayPause;
+
 - (void)updateProgress;
 @end
