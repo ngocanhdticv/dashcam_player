@@ -159,7 +159,7 @@ class PlayerView(
                 it.pause()
                 imgPlay.setImageResource(R.drawable.pause) // Change to play icon
             } else {
-                if (it.currentPosition == it.duration) {
+                if (it.currentPosition >= it.duration) {
                     it.seekTo(0)
                     txtTimePlay.text = formatTime(0) // Đặt thời gian hiện tại về 0
                     progressBar.progress = 0
