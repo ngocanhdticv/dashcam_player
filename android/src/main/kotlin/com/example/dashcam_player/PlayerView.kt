@@ -161,8 +161,8 @@ class PlayerView(
             } else {
                 if (it.currentPosition >= it.duration) {
                     it.seekTo(0)
-                    txtTimePlay.text = formatTime(0) // Đặt thời gian hiện tại về 0
                     progressBar.progress = 0
+                    txtTimePlay.text = formatTime(0) // Đặt thời gian hiện tại về 0
                 }
                 it.play()
                 imgPlay.setImageResource(R.drawable.play) // Change to pause icon

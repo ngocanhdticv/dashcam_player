@@ -10,6 +10,42 @@ class MockDashcamPlayerPlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  Future<int?> duration() {
+    // TODO: implement duration
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> pauseVideo() {
+    // TODO: implement pauseVideo
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> playVideo() {
+    // TODO: implement playVideo
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> replayVideo() {
+    // TODO: implement replayVideo
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> seekTo(double position) {
+    // TODO: implement seekTo
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> stopVideo() {
+    // TODO: implement stopVideo
+    throw UnimplementedError();
+  }
 }
 
 void main() {
